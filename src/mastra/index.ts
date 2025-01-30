@@ -1,21 +1,21 @@
 import { Mastra, MastraStorageLibSql } from '@mastra/core';
 import { LibSQLVector } from '@mastra/vector-libsql';
-import { catOne, agentTwo } from './agents/agent';
-import { logCatWorkflow } from './workflow';
+import { ycDirectoryAgent } from './agents/agent';
+import { syncYcDirectoryWorkflow } from './workflow';
 
 const storage = new MastraStorageLibSql({
   config: {
-    url: 'file:memory:'
+    url: 'file:storage.db'
   }
 })
 
 const vector = new LibSQLVector({
-  connectionUrl: 'file:memory:',
+  connectionUrl: 'file:data.db',
 })
 
 export const mastra = new Mastra({
-  agents: { catOne, agentTwo },
-  workflows: { logCatWorkflow },
+  agents: { ycDirectoryAgent },
+  workflows: { syncYcDirectoryWorkflow },
   storage,
   vectors: {
     libsql: vector

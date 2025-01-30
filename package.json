@@ -18,9 +18,9 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@mastra/core": "^0.1.27-alpha.81",
-    "@mastra/rag": "^0.0.2-alpha.72",
-    "@mastra/vector-libsql": "^0.0.1-alpha.16",
+    "@mastra/core": "^0.1.27-alpha.82",
+    "@mastra/rag": "^0.0.2-alpha.73",
+    "@mastra/vector-libsql": "^0.0.1-alpha.17",
     "zod": "^3.24.0"
   }
 }
